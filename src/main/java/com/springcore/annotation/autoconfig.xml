@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd ">
+    <context:annotation-config />
+   <!-- this is beans-->
+    <!-- value as a element-->
+    <bean class="com.springcore.annotation.Address" name="address">
+        <property name="street" value="BTM"/>
+        <property name="city" value="Bangalore"/>
+    </bean>
+
+    <bean class="com.springcore.annotation.Address" name="address1">
+        <property name="street" value="ABC"/>
+        <property name="city" value="XYZ"/>
+    </bean>
+<!--
+    By name
+    <bean class="com.springcoreautowire.Emp" name="emp" autowire="byName" /> -->
+
+    <!-- By Type-->
+    <bean class="com.springcore.annotation.Emp" name="emp" />
+
+
+   <!-- values use as p schema -->
+  <!--  <bean class="org.saty.Student" name="student2" p:id="333" p:name="Hello" p:address="hello"/> -->
+</beans>

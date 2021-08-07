@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- this is beans-->
+    <!-- value as a element-->
+    <bean class="com.spring.constructerInjection.Helper" name="help">
+        <constructor-arg value="Helle helper class"/>
+    </bean>
+    <bean class="com.spring.constructerInjection.Person" name="person">
+        <constructor-arg value="100" type="int"/>
+        <constructor-arg value="ABC"/>
+        <constructor-arg ref="help"/>
+
+
+
+    </bean>
+
+    <!-- values use as p schema -->
+    <!--  <bean class="org.saty.Student" name="student2" p:id="333" p:name="Hello" p:address="hello"/> -->
+</beans>

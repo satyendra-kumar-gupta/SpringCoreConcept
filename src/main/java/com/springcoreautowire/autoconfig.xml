@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!-- this is beans-->
+    <!-- value as a element-->
+    <bean class="com.springcoreautowire.Address" name="address">
+        <property name="street" value="BTM"/>
+        <property name="city" value="Bangalore"/>
+    </bean>
+<!--
+    By name
+    <bean class="com.springcoreautowire.Emp" name="emp" autowire="byName" /> -->
+
+    <!-- By Type-->
+    <bean class="com.springcoreautowire.Emp" name="emp" autowire="byType" />
+
+
+   <!-- values use as p schema -->
+  <!--  <bean class="org.saty.Student" name="student2" p:id="333" p:name="Hello" p:address="hello"/> -->
+</beans>

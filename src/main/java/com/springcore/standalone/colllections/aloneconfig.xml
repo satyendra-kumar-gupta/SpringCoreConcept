@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+    <context:annotation-config />
+
+    <!-- Stand alone list-->
+    <util:list list-class="java.util.LinkedList" id="myFriendList">
+        <value>Akshay</value>
+        <value>Ayush</value>
+        <value>Barath</value>
+        <value>Gautam</value>
+        <value>Manish</value>
+        <value>Kaushik</value>
+        <value>Shiva</value>
+        <value>Pavan</value>
+        <value>Rakesh</value>
+        <value>Surbhi badal</value>
+        <value>Shrinivash</value>
+        <value>Tushar</value>
+    </util:list>
+
+    <!-- Stand alone Map-->
+    <util:map map-class="java.util.HashMap" id="subjectPrice">
+        <entry key="Java" value="2000"/>
+        <entry key="Spring Boot" value="2000"/>
+        <entry key="Spring Core" value="2000"/>
+        <entry key="Python" value="2000"/>
+
+    </util:map>
+
+    <!-- This is properties-->
+    <util:properties id="propertiesTes">
+        <prop key="driver">com.mysql.jdbc.Driver</prop>
+        <prop key="username">saty</prop>
+        <prop key="password">123456</prop>
+        <prop key="url">mysql:jdbc://localhost:3306/mountblue</prop>
+    </util:properties>
+   <!-- this is beans-->
+    <!-- value as a element-->
+    <bean class="com.springcore.standalone.colllections.Person" name="person">
+        <property name="friends" ref="myFriendList" />
+        <property name="feeStructure" ref="subjectPrice" />
+        <property name="properties" ref="propertiesTes" />
+    </bean>
+
+   <!-- values use as p schema -->
+  <!--  <bean class="org.saty.Student" name="student2" p:id="333" p:name="Hello" p:address="hello"/> -->
+</beans>
